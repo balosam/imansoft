@@ -153,7 +153,7 @@
 
     function goTo(idx) {
       current = Math.max(0, Math.min(idx, maxIndex));
-      const cardWidth = cards[0].offsetWidth + 24; // gap
+      const cardWidth = cards[0].offsetWidth + 20; // gap matches 1.25rem
       track.style.transform = `translateX(-${current * cardWidth}px)`;
       dotsContainer.querySelectorAll('.tn-dot').forEach((d, i) => {
         d.classList.toggle('active', i === Math.floor(current / itemsPerView));
